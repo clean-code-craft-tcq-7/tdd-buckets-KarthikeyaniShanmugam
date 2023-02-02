@@ -6,11 +6,11 @@ sys.path.append(os.path.dirname(CURRENT_DIR))
 from src import rangeDetector
 
 
-class RangeTester(unittest.TestCase):
-    # Returns True or False. 
-    def test(self): 
-        detector = rangeDetector.RangeDetector()      
-        self.assertTrue(detector.range_and_readings_counter([3, 3, 5, 4, 10, 11, 12]) == [[[3,5], 4],[[10,12], 3]])
-        self.assertTrue(detector.range_and_readings_counter([4,5]) == [[[4,5],2]])
+class validateTester(unittest.TestCase):
+    def test(self):  
+        self.assertTrue(rangeDetector.detectRange([3, 3, 4, 5, 10, 11, 12]) == [[3,3,4,5],[10,11,12]])
+        self.assertTrue(rangeDetector.detectRange([100,101,102,500,501,501,502,503]) == [[100,101,102],[500,501,501,502,503]])
+        self.assertTrue(rangeDetector.detectRange([1,1,1,1,3,3,3,3]) == [[1,1,1,1],[3,3,3,3]])
+
 if __name__ == '__main__':
     unittest.main()
