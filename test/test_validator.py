@@ -1,5 +1,8 @@
 import unittest
-
+#import os, sys
+#CURRENT_DIR = os.path.dirname(os.path.abspath('src'))
+#CURRENT_DIR = os.path.join(CURRENT_DIR,'src')
+#sys.path.append(os.path.dirname(CURRENT_DIR))
 from src import validator
 
 
