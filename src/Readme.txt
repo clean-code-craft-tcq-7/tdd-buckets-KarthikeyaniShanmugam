@@ -1,0 +1,3 @@
+1. The Main program that connects all the fuctionalities is "rangeAndReadingsFinder.py". 
+2. Please execute the function "range_and_readings_counter" from program"rangeAndReadingsFinder.py" for the complete project testing.
+3. Given the input current samples as list, when the function range_and_readings_counter is called then csv formatted string is printed with final list in format [Min, Max, Count] is returned.
